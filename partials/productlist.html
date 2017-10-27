@@ -1,0 +1,33 @@
+
+<div id="product-text">
+
+<p> All Products would be displayed here </p>
+
+<input type="text" ng-model="test" placeholder="search Products"/>
+
+<a ui-sref="newproduct">Add New Product</a>
+
+</div>
+
+<div class="row">
+
+<ratings class="col-sm-4" ng-repeat="x in value | filter:test" ng-init="outerIndex = $index" >
+
+	<div class="product-item">
+	
+    <h2> {{x.productname}} </h2>
+    <img src={{x.productimage}} alt="productimage" height="100" width="100"/> <br> <br>
+	<button ng-click="upvote(x.upvotes,outerIndex)"> Upvote </button>
+     <p> {{x.upvotes}} </p>
+     <button ng-click="downvote(x.downvotes,outerIndex)">Downvote</button>
+     <p>  {{x.downvotes}} </p>
+     <br/>
+     <p> Rating: {{x.stars}} </p>
+
+     <a ui-sref="productview({id:{{outerIndex}}})">View in a Single Page</a>
+
+     </div>
+
+</ratings>
+
+</div>

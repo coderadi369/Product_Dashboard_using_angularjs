@@ -1,0 +1,23 @@
+
+<div style="margin-left:300px;margin-top:100px">
+<a ui-sref="products">View Products </a>
+</div>
+
+<form id="productupload" >
+
+Name of Product : <input type="text" id="name" ng-model="productname"> <br/>
+
+<label for="file">FileUpload</label>
+
+ <input type="file" onchange="angular.element(this).scope().imageUpload(event)">  <br/>
+
+<textarea rows="4" cols="50" ng-model="productdesc">
+Enter text here...</textarea>
+
+<button ng-click="productinfo()"> Submit </button>
+
+</form>
+
+<div style="margin-left:100px">
+<img src={{imagefile}} alt="img" height="100" width="100">
+</div>

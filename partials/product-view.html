@@ -1,0 +1,21 @@
+<p id="product-text"> Single Product details would be Present over Here </p>
+<div class="row">
+
+<ratings class="col-sm-4">
+	
+	<div class="product-item">
+
+    <h2> {{x.productname}} </h2>
+    <img src={{x.productimage}} alt="productimage" height="100" width="100"/> <br/>
+	<button ng-click="upvote(x.upvotes)"> Upvote </button>
+     <p> {{x.upvotes}} </p>
+     <button ng-click="downvote(x.downvotes)">Downvote</button>
+     <p>  {{x.downvotes}} </p>
+     <br/>
+     <p> {{x.stars}} </p>
+
+    </div>
+
+</ratings>
+
+</div>
